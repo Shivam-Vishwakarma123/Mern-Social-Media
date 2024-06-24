@@ -15,7 +15,6 @@ function MyRouter() {
             <Route path='/contact-us' element={<Contact />} />
             <Route path='/employee' element={<EmployeeList />} />
             <Route path='/add-employee' element={<AddEmployee />} />
-            <Route path='/add-employee' element={<AddEmployee />} />
             <Route path='/employee/edit/:id' element={<EditEmployee />} />
             {/* <Route path='/employee/delete/:id' element={ <DeleteEmployee />} /> */}
         </Routes>

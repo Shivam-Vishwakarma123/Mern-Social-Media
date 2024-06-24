@@ -58,7 +58,7 @@ function EmployeeList() {
         var secure_token = JSON.parse(token);
         if (token) {
             await deleteEmployee(id, secure_token.token);
-            setEmployees(employees.filter(employee => employee.id !== id));
+            setEmployees(employees.filter(employee => employee.employee_id  !== id));
         }
     };
 
@@ -91,8 +91,8 @@ function EmployeeList() {
                                     <tbody>
                                         {employees.length > 0 ? (
                                             employees.map((employee) => (
-                                                <tr key={employee.id}>
-                                                    <td>{employee.id}</td>
+                                                <tr key={employee.employee_id }>
+                                                    <td>{employee.employee_id }</td>
                                                     <td>{employee.first_name}</td>
                                                     <td>{employee.last_name}</td>
                                                     <td>{employee.email}</td>
@@ -100,8 +100,8 @@ function EmployeeList() {
                                                     <td>{employee.organization}</td>
                                                     <td>{employee.designation}</td>
                                                     <td>
-                                                        <Link to={`/employee/edit/${employee.id}`} className="btn btn-success me-2">Edit</Link>
-                                                        <button onClick={() => handleDelete(employee.id)} className="btn btn-danger">Delete</button>
+                                                        <Link to={`/employee/edit/${employee.employee_id }`} className="btn btn-success me-2">Edit</Link>
+                                                        <button onClick={() => handleDelete(employee.employee_id )} className="btn btn-danger">Delete</button>
                                                     </td>
                                                 </tr>
                                             ))
